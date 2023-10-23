@@ -1,4 +1,9 @@
 # openshift-gitops-microshift
+This repo contains kustomize manifests and the documented steps that can help installing upstream ArgoCD core profile on a microshift instance.
+Only the following core components would be installed in the microshift instance.
+- application-controller
+- repo-server
+- redis
 
 ## Testing on a openshift-local(CRC) cluster on your laptop
 
@@ -10,7 +15,7 @@
 ```crc config set preset microshift```
 - Start the CRC instance and wait till the required processes comes up
 ```crc start```
-- Check the status of the cluster
+- Check the status of the cluster and ensure that the instance is in `Running` state and is healthy.
 ```crc status```
 
 ### Connect to the local CRC instance

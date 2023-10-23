@@ -1,7 +1,7 @@
 # builds the kustomize bundle that could be deployed to /etc/microshift/manifests
 .PHONY: bundle
 bundle:
-	tar cvfz openshift-gitops-microshift.tar.gz openshift-gitops
+	tar cvfz openshift-gitops-microshift.tar.gz openshift-gitops kustomization.yaml
 
 
 .PHONY: help
