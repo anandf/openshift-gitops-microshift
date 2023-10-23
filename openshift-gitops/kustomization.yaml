@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: openshift-gitops
+resources:
+- namespace.yaml
+- crds
+- config
+- application-controller
+- repo-server
+- redis
+images:
+- name: quay.io/argoproj/argocd
+  newName: quay.io/argoproj/argocd
+  newTag: latest

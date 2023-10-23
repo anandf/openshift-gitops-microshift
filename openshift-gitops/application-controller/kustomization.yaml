@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: openshift-gitops
+resources:
+- application-controller-cluster-role-binding.yaml
+- application-controller-cluster-role.yaml
+- application-controller-network-policy.yaml
+- application-controller-sa.yaml
+- application-controller-statefulset.yaml
+- argocd-metrics.yaml
